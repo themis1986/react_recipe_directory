@@ -8,11 +8,11 @@ import "./Navbar.css";
 import React from "react";
 
 export default function Navbar() {
-  const { color } = useTheme();
+  const { color, changeColor } = useTheme();
 
   return (
     <div className="navbar" style={{ background: color }}>
-      <nav>
+      <nav onClick={() => changeColor("pink")}>
         <Link to="/" className="brand">
           <h1>Cooking Ninja</h1>
         </Link>
