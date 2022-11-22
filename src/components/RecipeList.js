@@ -5,6 +5,10 @@ import "./RecipeList.css";
 import React from "react";
 
 export default function RecipeList({ recipes }) {
+  if (recipes.length === 0) {
+    return <div className="error">No recipies to load...</div>;
+  }
+
   return (
     <div className="recipe-list">
       {recipes.map((recipe) => (
